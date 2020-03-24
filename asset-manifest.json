@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/akintomiwa-fisayo/lampsAndImages/static/css/main.33777983.chunk.css",
-    "main.js": "/akintomiwa-fisayo/lampsAndImages/static/js/main.e2b98bc9.chunk.js",
-    "main.js.map": "/akintomiwa-fisayo/lampsAndImages/static/js/main.e2b98bc9.chunk.js.map",
-    "runtime-main.js": "/akintomiwa-fisayo/lampsAndImages/static/js/runtime-main.a045e684.js",
-    "runtime-main.js.map": "/akintomiwa-fisayo/lampsAndImages/static/js/runtime-main.a045e684.js.map",
-    "static/js/2.7e9f46fe.chunk.js": "/akintomiwa-fisayo/lampsAndImages/static/js/2.7e9f46fe.chunk.js",
-    "static/js/2.7e9f46fe.chunk.js.map": "/akintomiwa-fisayo/lampsAndImages/static/js/2.7e9f46fe.chunk.js.map",
+    "main.js": "/akintomiwa-fisayo/lampsAndImages/static/js/main.95431acc.chunk.js",
+    "main.js.map": "/akintomiwa-fisayo/lampsAndImages/static/js/main.95431acc.chunk.js.map",
+    "runtime-main.js": "/akintomiwa-fisayo/lampsAndImages/static/js/runtime-main.b3d0f3a0.js",
+    "runtime-main.js.map": "/akintomiwa-fisayo/lampsAndImages/static/js/runtime-main.b3d0f3a0.js.map",
+    "static/js/2.13891e90.chunk.js": "/akintomiwa-fisayo/lampsAndImages/static/js/2.13891e90.chunk.js",
+    "static/js/2.13891e90.chunk.js.map": "/akintomiwa-fisayo/lampsAndImages/static/js/2.13891e90.chunk.js.map",
     "index.html": "/akintomiwa-fisayo/lampsAndImages/index.html",
-    "precache-manifest.c7dbc0200bfedda27684d4ade9407680.js": "/akintomiwa-fisayo/lampsAndImages/precache-manifest.c7dbc0200bfedda27684d4ade9407680.js",
+    "precache-manifest.0a0c1dfb288be8490bc445b4fa698d25.js": "/akintomiwa-fisayo/lampsAndImages/precache-manifest.0a0c1dfb288be8490bc445b4fa698d25.js",
     "service-worker.js": "/akintomiwa-fisayo/lampsAndImages/service-worker.js",
     "static/css/main.33777983.chunk.css.map": "/akintomiwa-fisayo/lampsAndImages/static/css/main.33777983.chunk.css.map",
     "static/media/general.css": "/akintomiwa-fisayo/lampsAndImages/static/media/header_light.f1a4a058.woff2",
@@ -38,9 +38,9 @@
     "static/media/logo.svg": "/akintomiwa-fisayo/lampsAndImages/static/media/logo.25bf045c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a045e684.js",
-    "static/js/2.7e9f46fe.chunk.js",
+    "static/js/runtime-main.b3d0f3a0.js",
+    "static/js/2.13891e90.chunk.js",
     "static/css/main.33777983.chunk.css",
-    "static/js/main.e2b98bc9.chunk.js"
+    "static/js/main.95431acc.chunk.js"
   ]
 }
