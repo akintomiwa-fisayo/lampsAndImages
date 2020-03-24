@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/akintomiwa-fisayo/lampsAndImages/static/css/main.33777983.chunk.css",
-    "main.js": "/akintomiwa-fisayo/lampsAndImages/static/js/main.2a4310f4.chunk.js",
-    "main.js.map": "/akintomiwa-fisayo/lampsAndImages/static/js/main.2a4310f4.chunk.js.map",
+    "main.js": "/akintomiwa-fisayo/lampsAndImages/static/js/main.e2b98bc9.chunk.js",
+    "main.js.map": "/akintomiwa-fisayo/lampsAndImages/static/js/main.e2b98bc9.chunk.js.map",
     "runtime-main.js": "/akintomiwa-fisayo/lampsAndImages/static/js/runtime-main.a045e684.js",
     "runtime-main.js.map": "/akintomiwa-fisayo/lampsAndImages/static/js/runtime-main.a045e684.js.map",
     "static/js/2.7e9f46fe.chunk.js": "/akintomiwa-fisayo/lampsAndImages/static/js/2.7e9f46fe.chunk.js",
     "static/js/2.7e9f46fe.chunk.js.map": "/akintomiwa-fisayo/lampsAndImages/static/js/2.7e9f46fe.chunk.js.map",
     "index.html": "/akintomiwa-fisayo/lampsAndImages/index.html",
-    "precache-manifest.1fb9ef37f1329efb636d023f11e9ea9c.js": "/akintomiwa-fisayo/lampsAndImages/precache-manifest.1fb9ef37f1329efb636d023f11e9ea9c.js",
+    "precache-manifest.c7dbc0200bfedda27684d4ade9407680.js": "/akintomiwa-fisayo/lampsAndImages/precache-manifest.c7dbc0200bfedda27684d4ade9407680.js",
     "service-worker.js": "/akintomiwa-fisayo/lampsAndImages/service-worker.js",
     "static/css/main.33777983.chunk.css.map": "/akintomiwa-fisayo/lampsAndImages/static/css/main.33777983.chunk.css.map",
     "static/media/general.css": "/akintomiwa-fisayo/lampsAndImages/static/media/header_light.f1a4a058.woff2",
@@ -41,6 +41,6 @@
     "static/js/runtime-main.a045e684.js",
     "static/js/2.7e9f46fe.chunk.js",
     "static/css/main.33777983.chunk.css",
-    "static/js/main.2a4310f4.chunk.js"
+    "static/js/main.e2b98bc9.chunk.js"
   ]
 }
