@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/akintomiwa-fisayo/lampsAndImages/precache-manifest.3e549f02ebe00695e31817a8873ddfb3.js"
+  "/akintomiwa-fisayo/lampsAndImages/precache-manifest.a6f72cc624298ae06bf1cc08047ad1dc.js"
 );
 
 self.addEventListener('message', (event) => {
