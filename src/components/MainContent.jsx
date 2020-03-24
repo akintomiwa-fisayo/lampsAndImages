@@ -5,9 +5,7 @@ import Home from './Home';
 class MainContent extends React.Component {
   render() {
     return (
-      <Switch>
-        <Route path="/" render={() => <Home />} />
-      </Switch>
+      <Home />
     );
   }
 }
