@@ -17,9 +17,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <MainContent />
-        <Footer />
+        <Router basename={`${process.env.PUBLIC_URL}/`}>
+          <Header />
+          <MainContent />
+          <Footer />
+        </Router>
       </div>
     );
   }
