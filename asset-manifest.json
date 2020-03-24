@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/akintomiwa-fisayo/lampsAndImages/static/css/main.33777983.chunk.css",
-    "main.js": "/akintomiwa-fisayo/lampsAndImages/static/js/main.d88f6b35.chunk.js",
-    "main.js.map": "/akintomiwa-fisayo/lampsAndImages/static/js/main.d88f6b35.chunk.js.map",
+    "main.js": "/akintomiwa-fisayo/lampsAndImages/static/js/main.0f18a154.chunk.js",
+    "main.js.map": "/akintomiwa-fisayo/lampsAndImages/static/js/main.0f18a154.chunk.js.map",
     "runtime-main.js": "/akintomiwa-fisayo/lampsAndImages/static/js/runtime-main.a045e684.js",
     "runtime-main.js.map": "/akintomiwa-fisayo/lampsAndImages/static/js/runtime-main.a045e684.js.map",
-    "static/js/2.7e9f46fe.chunk.js": "/akintomiwa-fisayo/lampsAndImages/static/js/2.7e9f46fe.chunk.js",
-    "static/js/2.7e9f46fe.chunk.js.map": "/akintomiwa-fisayo/lampsAndImages/static/js/2.7e9f46fe.chunk.js.map",
+    "static/js/2.b03979c5.chunk.js": "/akintomiwa-fisayo/lampsAndImages/static/js/2.b03979c5.chunk.js",
+    "static/js/2.b03979c5.chunk.js.map": "/akintomiwa-fisayo/lampsAndImages/static/js/2.b03979c5.chunk.js.map",
     "index.html": "/akintomiwa-fisayo/lampsAndImages/index.html",
-    "precache-manifest.9a35306effac2a264387dc2a4eec49c3.js": "/akintomiwa-fisayo/lampsAndImages/precache-manifest.9a35306effac2a264387dc2a4eec49c3.js",
+    "precache-manifest.611727784e379df5072c8ed2befa46b3.js": "/akintomiwa-fisayo/lampsAndImages/precache-manifest.611727784e379df5072c8ed2befa46b3.js",
     "service-worker.js": "/akintomiwa-fisayo/lampsAndImages/service-worker.js",
     "static/css/main.33777983.chunk.css.map": "/akintomiwa-fisayo/lampsAndImages/static/css/main.33777983.chunk.css.map",
     "static/media/general.css": "/akintomiwa-fisayo/lampsAndImages/static/media/header_light.f1a4a058.woff2",
@@ -39,8 +39,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.a045e684.js",
-    "static/js/2.7e9f46fe.chunk.js",
+    "static/js/2.b03979c5.chunk.js",
     "static/css/main.33777983.chunk.css",
-    "static/js/main.d88f6b35.chunk.js"
+    "static/js/main.0f18a154.chunk.js"
   ]
 }
