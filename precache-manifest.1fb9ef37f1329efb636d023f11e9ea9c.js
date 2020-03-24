@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "037daad206fdfb79532461083d40811a",
+    "revision": "40864c7c545c88a927e3076d1fe71048",
     "url": "/akintomiwa-fisayo/lampsAndImages/index.html"
   },
   {
-    "revision": "2048d5d5bbea261c1f54",
+    "revision": "c1d2ab94271e8dbae788",
     "url": "/akintomiwa-fisayo/lampsAndImages/static/css/main.33777983.chunk.css"
   },
   {
-    "revision": "93c117b0e2a50147a095",
-    "url": "/akintomiwa-fisayo/lampsAndImages/static/js/2.b03979c5.chunk.js"
+    "revision": "b35bd8e38e0767087660",
+    "url": "/akintomiwa-fisayo/lampsAndImages/static/js/2.7e9f46fe.chunk.js"
   },
   {
-    "revision": "2048d5d5bbea261c1f54",
-    "url": "/akintomiwa-fisayo/lampsAndImages/static/js/main.0f18a154.chunk.js"
+    "revision": "c1d2ab94271e8dbae788",
+    "url": "/akintomiwa-fisayo/lampsAndImages/static/js/main.2a4310f4.chunk.js"
   },
   {
     "revision": "36876a1504d92bf886fb",
