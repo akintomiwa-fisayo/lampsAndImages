@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e79421a0f6d8ee98590c8f7a7fc48379",
+    "revision": "ab74f4c21c35176c22b09662d2349bbb",
     "url": "/akintomiwa-fisayo/lampsAndImages/index.html"
   },
   {
-    "revision": "e1b9b9fb2eca9a26d16b",
+    "revision": "2fffae477bc490fb12cd",
     "url": "/akintomiwa-fisayo/lampsAndImages/static/css/main.33777983.chunk.css"
   },
   {
-    "revision": "0a5cd0bf35a3865f58be",
-    "url": "/akintomiwa-fisayo/lampsAndImages/static/js/2.4d57a208.chunk.js"
+    "revision": "b35bd8e38e0767087660",
+    "url": "/akintomiwa-fisayo/lampsAndImages/static/js/2.7e9f46fe.chunk.js"
   },
   {
-    "revision": "e1b9b9fb2eca9a26d16b",
-    "url": "/akintomiwa-fisayo/lampsAndImages/static/js/main.34834307.chunk.js"
+    "revision": "2fffae477bc490fb12cd",
+    "url": "/akintomiwa-fisayo/lampsAndImages/static/js/main.d88f6b35.chunk.js"
   },
   {
-    "revision": "c14cab57bdd7af492960",
-    "url": "/akintomiwa-fisayo/lampsAndImages/static/js/runtime-main.b3d0f3a0.js"
+    "revision": "36876a1504d92bf886fb",
+    "url": "/akintomiwa-fisayo/lampsAndImages/static/js/runtime-main.a045e684.js"
   },
   {
     "revision": "47f711bd1524b9283aa92d3d74db16a8",
