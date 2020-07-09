@@ -1,1 +1,1 @@
-# lampsAndIMages
+# BridgingAfrica
