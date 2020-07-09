@@ -27,7 +27,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\phezzy\\Desktop\\WORK\\afrihub\\components\\SlideShow.js";
+var _jsxFileName = "C:\\Users\\phezzy\\Desktop\\WORK\\lampsAndImages\\components\\SlideShow.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__["default"])(this, result); }; }
@@ -63,9 +63,9 @@ var SlideShow = /*#__PURE__*/function (_React$Component) {
       var next = 0;
 
       if (dir === 'left') {
-        next = state.focused === 0 ? state.items.length / 4 - 1 : state.focused - 1;
+        next = state.focused === 0 ? state.items.length - 1 : state.focused - 1;
       } else if (dir === 'right') {
-        next = state.focused === state.items.length / 4 - 1 ? 0 : state.focused + 1;
+        next = state.focused === state.items.length - 1 ? 0 : state.focused + 1;
       }
 
       this.setState(function () {
@@ -82,48 +82,42 @@ var SlideShow = /*#__PURE__*/function (_React$Component) {
       var state = this.state;
       var items = [];
       var indicators = [];
-      var counter = 1;
       state.items.forEach(function (item, i) {
-        if (counter === 1) {
-          items.push([]);
-        }
-
-        items[items.length - 1].push(__jsx("div", {
+        items.push(__jsx("div", {
           className: "item",
           key: "".concat(i, "_item"),
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 40,
+            lineNumber: 36,
             columnNumber: 9
           }
-        }, item.content, __jsx("p", {
-          className: "item-label",
+        }, " ", item.content, " ")); // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
+
+        indicators.push(__jsx("li", {
+          className: "".concat(state.focused === i ? 'active' : ''),
+          key: "".concat(i, "_indicator"),
+          onClick: function onClick() {
+            _this2.setState(function () {
+              return {
+                focused: i
+              };
+            });
+          },
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 42,
-            columnNumber: 11
+            lineNumber: 39,
+            columnNumber: 23
           }
-        }, item.label))); // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-
-        /*  indicators.push(<li
-          className={`${state.focused === i ? 'active' : ''}`}
-          key={`${i}_indicator`}
-          onClick={() => {
-            this.setState(() => ({ focused: i }));
-          }}
-        />); */
-
-        counter = counter === 4 ? 1 : counter + 1;
+        }));
       });
       return __jsx("div", {
         "data-slideshow": true,
-        className: "slide-show-container",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57,
+          lineNumber: 49,
           columnNumber: 7
         }
       }, __jsx("div", {
@@ -131,7 +125,7 @@ var SlideShow = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58,
+          lineNumber: 50,
           columnNumber: 9
         }
       }, __jsx("div", {
@@ -142,25 +136,15 @@ var SlideShow = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59,
+          lineNumber: 51,
           columnNumber: 11
         }
-      }, items.map(function (itemGroup) {
-        return __jsx("div", {
-          className: "item-group",
-          __self: _this2,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 60,
-            columnNumber: 39
-          }
-        }, itemGroup);
-      })), __jsx("ul", {
+      }, items), __jsx("ul", {
         className: "indicators",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62,
+          lineNumber: 54,
           columnNumber: 11
         }
       }, indicators, " "), __jsx("span", {
@@ -171,7 +155,7 @@ var SlideShow = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64,
+          lineNumber: 56,
           columnNumber: 11
         }
       }), __jsx("span", {
@@ -182,7 +166,7 @@ var SlideShow = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70,
+          lineNumber: 62,
           columnNumber: 11
         }
       })));
@@ -222,7 +206,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\phezzy\\Desktop\\WORK\\afrihub\\components\\general\\Footer.js";
+var _jsxFileName = "C:\\Users\\phezzy\\Desktop\\WORK\\lampsAndImages\\components\\general\\Footer.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, result); }; }
@@ -255,7 +239,7 @@ var Footer = /*#__PURE__*/function (_React$Component) {
           columnNumber: 9
         }
       }, __jsx("div", {
-        className: "content",
+        className: "content container",
         __self: this,
         __source: {
           fileName: _jsxFileName,
@@ -277,26 +261,26 @@ var Footer = /*#__PURE__*/function (_React$Component) {
           lineNumber: 12,
           columnNumber: 15
         }
-      }, "About Bridging Afrika"), __jsx("p", {
+      }, "Lamps ANd Images"), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 13,
           columnNumber: 15
         }
-      }, "Do non amet proident eiusmod magna et. Anim ipsum aliquip reprehenderit est in incididunt sit. Sit do eu labore irure. Dolor laboris commodo ea ad labore reprehenderit. Proident ex nisi irure voluptate cupidatat cupidatat mollit nisi ad do enim sunt non. Ex ipsum est anim laboris officia deserunt elit. Mollit ad aliquip cupidatat proident dolor adipisicing non aute exercitation. Sit reprehenderit ea irure exercitation ipsum fugiat voluptate laboris proident ex esse sit quis quis. Elit irure ut non veniam incididunt enim veniam aliquip duis proident Lorem. Qui veniam nostrud officia ipsum deserunt voluptate.")), __jsx("div", {
+      }, "Do non amet proident eiusmod magna et. Anim ipsum aliquip reprehenderit est in incididunt sit. Sit do eu labore irure. Dolor laboris commodo ea ad labore repr")), __jsx("div", {
         className: "column",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20,
+          lineNumber: 19,
           columnNumber: 13
         }
       }, __jsx("h4", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21,
+          lineNumber: 20,
           columnNumber: 15
         }
       }, "Quick Links"), __jsx("p", {
@@ -304,7 +288,7 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22,
+          lineNumber: 21,
           columnNumber: 15
         }
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -312,14 +296,14 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23,
+          lineNumber: 22,
           columnNumber: 17
         }
       }, __jsx("a", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23,
+          lineNumber: 22,
           columnNumber: 32
         }
       }, "Home"))), __jsx("p", {
@@ -327,7 +311,7 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25,
+          lineNumber: 24,
           columnNumber: 15
         }
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -335,14 +319,37 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26,
+          lineNumber: 25,
           columnNumber: 17
         }
       }, __jsx("a", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26,
+          lineNumber: 25,
+          columnNumber: 32
+        }
+      }, "Rental catalogue"))), __jsx("p", {
+        className: "link",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27,
+          columnNumber: 15
+        }
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
+        href: "/",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28,
+          columnNumber: 17
+        }
+      }, __jsx("a", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28,
           columnNumber: 32
         }
       }, "About"))), __jsx("p", {
@@ -350,137 +357,45 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28,
+          lineNumber: 30,
           columnNumber: 15
         }
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
         href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29,
-          columnNumber: 17
-        }
-      }, __jsx("a", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29,
-          columnNumber: 32
-        }
-      }, "Innovations"))), __jsx("p", {
-        className: "link",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 31,
-          columnNumber: 15
-        }
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32,
           columnNumber: 17
         }
       }, __jsx("a", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32,
+          lineNumber: 31,
           columnNumber: 32
         }
-      }, "Profiles"))), __jsx("p", {
+      }, "Latest work"))), __jsx("p", {
         className: "link",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33,
+          columnNumber: 15
+        }
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
+        href: "/",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 34,
-          columnNumber: 15
-        }
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35,
           columnNumber: 17
         }
       }, __jsx("a", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35,
-          columnNumber: 32
-        }
-      }, "Crowdfunding"))), __jsx("p", {
-        className: "link",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37,
-          columnNumber: 15
-        }
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38,
-          columnNumber: 17
-        }
-      }, __jsx("a", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38,
-          columnNumber: 32
-        }
-      }, "Blog"))), __jsx("p", {
-        className: "link",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40,
-          columnNumber: 15
-        }
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41,
-          columnNumber: 17
-        }
-      }, __jsx("a", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41,
-          columnNumber: 32
-        }
-      }, "Forum"))), __jsx("p", {
-        className: "link",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 43,
-          columnNumber: 15
-        }
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 44,
-          columnNumber: 17
-        }
-      }, __jsx("a", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 44,
+          lineNumber: 34,
           columnNumber: 32
         }
       }, "Contact")))), __jsx("div", {
@@ -488,14 +403,14 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48,
+          lineNumber: 38,
           columnNumber: 13
         }
       }, __jsx("h4", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49,
+          lineNumber: 39,
           columnNumber: 15
         }
       }, "Stay in touch"), __jsx("div", {
@@ -503,7 +418,7 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50,
+          lineNumber: 40,
           columnNumber: 15
         }
       }, __jsx("div", {
@@ -511,7 +426,7 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51,
+          lineNumber: 41,
           columnNumber: 17
         }
       }, __jsx("span", {
@@ -519,22 +434,22 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52,
+          lineNumber: 42,
           columnNumber: 19
         }
       }), __jsx("span", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53,
+          lineNumber: 43,
           columnNumber: 19
         }
-      }, "The address to the company's physical location comes here")), __jsx("div", {
+      }, "The address to the company's physical location")), __jsx("div", {
         className: "info",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55,
+          lineNumber: 45,
           columnNumber: 17
         }
       }, __jsx("span", {
@@ -542,22 +457,22 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56,
+          lineNumber: 46,
           columnNumber: 19
         }
       }), __jsx("span", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57,
+          lineNumber: 47,
           columnNumber: 19
         }
-      }, "Info@bridgingAfrika.com")), __jsx("div", {
+      }, "Info@lapmsAndImages.com")), __jsx("div", {
         className: "info",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59,
+          lineNumber: 49,
           columnNumber: 17
         }
       }, __jsx("span", {
@@ -565,14 +480,14 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60,
+          lineNumber: 50,
           columnNumber: 19
         }
       }), __jsx("span", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61,
+          lineNumber: 51,
           columnNumber: 19
         }
       }, "090673248798"))), __jsx("div", {
@@ -580,7 +495,7 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64,
+          lineNumber: 54,
           columnNumber: 15
         }
       }, __jsx("span", {
@@ -588,7 +503,7 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65,
+          lineNumber: 55,
           columnNumber: 17
         }
       }), __jsx("span", {
@@ -596,7 +511,7 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66,
+          lineNumber: 56,
           columnNumber: 17
         }
       }), __jsx("span", {
@@ -604,7 +519,7 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67,
+          lineNumber: 57,
           columnNumber: 17
         }
       }), __jsx("span", {
@@ -612,7 +527,7 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68,
+          lineNumber: 58,
           columnNumber: 17
         }
       })))), __jsx("p", {
@@ -620,10 +535,10 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72,
+          lineNumber: 62,
           columnNumber: 11
         }
-      }, "copyright \xA9 2020 Bridging Afrika")));
+      }, "copyright \xA9 2020 Lamps  And Images")));
     }
   }]);
 
@@ -663,7 +578,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\phezzy\\Desktop\\WORK\\afrihub\\components\\general\\Header.js";
+var _jsxFileName = "C:\\Users\\phezzy\\Desktop\\WORK\\lampsAndImages\\components\\general\\Header.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, result); }; }
@@ -759,7 +674,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
           lineNumber: 48,
           columnNumber: 11
         }
-      }, "Bridging Afrika"), __jsx("meta", {
+      }, "Lamps And Images"), __jsx("meta", {
         name: "viewport",
         content: "width=device-width, initial-scale=1.0",
         __self: this,
@@ -777,28 +692,6 @@ var Header = /*#__PURE__*/function (_React$Component) {
           lineNumber: 50,
           columnNumber: 11
         }
-      }), __jsx("script", {
-        type: "text/javascript",
-        dangerouslySetInnerHTML: {
-          __html: "\n                      window.addEventListener(\"load\", function () { \n                      document.querySelector('body').classList.add('loaded'); });\n                    "
-        },
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 52,
-          columnNumber: 11
-        }
-      }), __jsx("link", {
-        href: "/css/theme.min.css",
-        rel: "stylesheet",
-        type: "text/css",
-        media: "all",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 62,
-          columnNumber: 11
-        }
       }), __jsx("link", {
         href: "/css/demo.css",
         rel: "stylesheet",
@@ -807,16 +700,16 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63,
+          lineNumber: 53,
           columnNumber: 11
         }
       }), __jsx("link", {
-        href: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
         rel: "stylesheet",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65,
+          lineNumber: 55,
           columnNumber: 11
         }
       }), __jsx("link", {
@@ -825,7 +718,16 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66,
+          lineNumber: 56,
+          columnNumber: 11
+        }
+      }), __jsx("link", {
+        rel: "stylesheet",
+        href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -834,7 +736,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69,
+          lineNumber: 60,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -843,7 +745,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70,
+          lineNumber: 61,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -852,7 +754,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71,
+          lineNumber: 62,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -863,7 +765,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76,
+          lineNumber: 67,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -872,7 +774,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93,
+          lineNumber: 84,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -881,7 +783,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95,
+          lineNumber: 86,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -890,7 +792,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97,
+          lineNumber: 88,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -899,7 +801,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99,
+          lineNumber: 90,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -908,7 +810,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101,
+          lineNumber: 92,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -917,7 +819,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103,
+          lineNumber: 94,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -926,7 +828,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105,
+          lineNumber: 96,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -935,7 +837,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107,
+          lineNumber: 98,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -944,7 +846,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108,
+          lineNumber: 99,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -953,7 +855,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110,
+          lineNumber: 101,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -962,7 +864,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112,
+          lineNumber: 103,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -971,7 +873,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114,
+          lineNumber: 105,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -980,7 +882,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116,
+          lineNumber: 107,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -989,7 +891,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118,
+          lineNumber: 109,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -998,7 +900,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120,
+          lineNumber: 111,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -1007,7 +909,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122,
+          lineNumber: 113,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -1016,7 +918,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 124,
+          lineNumber: 115,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -1025,7 +927,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126,
+          lineNumber: 117,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -1034,7 +936,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128,
+          lineNumber: 119,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -1043,7 +945,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129,
+          lineNumber: 120,
           columnNumber: 11
         }
       }), __jsx("script", {
@@ -1053,12 +955,12 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 132,
+          lineNumber: 123,
           columnNumber: 11
         }
       })), __jsx("div", {
         id: "header",
-        className: "navbar-container".concat(header.transparent ? ' transparent' : '').concat(!header.fixed ? ' fixed' : ''),
+        className: "".concat(header.transparent ? ' transparent' : '').concat(!header.fixed ? ' fixed' : ''),
         style: header.fixed ? {
           position: 'absolute',
           top: "".concat(header.fixedTop, "px")
@@ -1067,16 +969,15 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 135,
+          lineNumber: 126,
           columnNumber: 9
         }
-      }, __jsx("nav", {
-        className: "navbar navbar-expand-lg navbar-light ",
-        "data-sticky": "top",
+      }, __jsx("div", {
+        className: "container",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 144,
+          lineNumber: 136,
           columnNumber: 11
         }
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -1084,309 +985,271 @@ var Header = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146,
+          lineNumber: 137,
           columnNumber: 13
         }
       }, __jsx("a", {
-        id: "logo",
-        className: "navbar-brand navbar-brand-dynamic-color fade-page",
+        className: "logo",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 138,
+          columnNumber: 15
+        }
+      }, __jsx("img", {
+        alt: "AfriHub",
+        src: "/img/logo.png",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 139,
+          columnNumber: 17
+        }
+      }))), __jsx("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 146,
+          columnNumber: 13
+        }
+      }, __jsx("div", {
+        className: "address",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 147,
           columnNumber: 15
         }
-      }, __jsx("img", {
-        alt: "AfriHub",
-        src: "/img/logo.png",
-        style: {
-          borderRadius: '4px',
-          height: '50px'
-        },
+      }, __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 148,
           columnNumber: 17
         }
-      }))), __jsx("div", {
-        className: "d-flex align-items-center order-lg-3",
+      }, "Location"), __jsx("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 149,
+          columnNumber: 17
+        }
+      }, "09067677842"), __jsx("a", {
+        href: "mailto:themail@mail.com",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 150,
+          columnNumber: 17
+        }
+      }, "email@theEmail.com")), __jsx("div", {
+        className: "address",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 153,
+          columnNumber: 15
+        }
+      }, __jsx("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 154,
+          columnNumber: 17
+        }
+      }, "Location"), __jsx("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 155,
+          columnNumber: 17
+        }
+      }, "09067677842"), __jsx("a", {
+        href: "mailto:themail@mail.com",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 156,
-          columnNumber: 13
-        }
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/sign-up",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 157,
-          columnNumber: 15
-        }
-      }, __jsx("a", {
-        id: "login",
-        className: "btn btn-primary ml-lg-4 mr-3 mr-md-4 mr-lg-0 d-none d-sm-block order-lg-3",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 158,
           columnNumber: 17
         }
-      }, "Login / Signup ")), __jsx("button", {
-        "aria-expanded": "false",
-        "aria-label": "Toggle navigation",
-        className: "navbar-toggler",
-        "data-target": ".navbar-collapse",
-        "data-toggle": "collapse",
-        type: "button",
+      }, "email@theEmail.com")), __jsx("div", {
+        className: "search-bar",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 159,
+          columnNumber: 15
+        }
+      }, __jsx("input", {
+        placeholder: "Search",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 160,
+          columnNumber: 17
+        }
+      }), __jsx("span", {
+        className: "icon",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 161,
-          columnNumber: 15
+          columnNumber: 17
         }
-      }, __jsx("img", {
-        alt: "Navbar Toggler Open Icon",
-        className: "navbar-toggler-open icon icon-sm",
-        "data-inject-svg": true,
-        src: "/img/icons/interface/icon-menu.svg",
+      }, __jsx("span", {
+        className: "icon-magnifier",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 162,
+          columnNumber: 19
+        }
+      })))))), __jsx("div", {
+        className: "sub-header",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 169,
-          columnNumber: 17
+          columnNumber: 9
         }
-      }), __jsx("img", {
-        alt: "Navbar Toggler Close Icon",
-        className: "navbar-toggler-close icon icon-sm",
-        "data-inject-svg": true,
-        src: "/img/icons/interface/icon-x.svg",
+      }, __jsx("div", {
+        className: "container",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 175,
+          lineNumber: 170,
+          columnNumber: 11
+        }
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/index",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 172,
+          columnNumber: 13
+        }
+      }, __jsx("a", {
+        className: "logo",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 173,
+          columnNumber: 15
+        }
+      }, __jsx("img", {
+        alt: "AfriHub",
+        src: "/img/logo.png",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 174,
           columnNumber: 17
         }
       }))), __jsx("div", {
-        className: "collapse navbar-collapse order-3 order-lg-2 justify-content-lg-end",
-        id: "navigation-menu",
+        className: "navbar-nav",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 181,
+          columnNumber: 13
+        }
+      }, __jsx("span", {
+        className: "nav-item",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 182,
+          columnNumber: 15
+        }
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/rentals",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 183,
+          columnNumber: 17
+        }
+      }, __jsx("a", {
+        className: "nav-link",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 184,
-          columnNumber: 13
-        }
-      }, __jsx("ul", {
-        className: "navbar-nav my-3 my-lg-0",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 185,
-          columnNumber: 15
-        }
-      }, __jsx("li", {
-        className: "nav-item",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 186,
-          columnNumber: 17
-        }
-      }, __jsx("a", {
-        className: "nav-link",
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 187,
           columnNumber: 19
         }
-      }, __jsx("span", {
-        className: "\tfa fa-home icon",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 188,
-          columnNumber: 21
-        }
-      }), "Accueil")), __jsx("li", {
+      }, "Rental Catalogue"))), __jsx("span", {
         className: "nav-item",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 192,
-          columnNumber: 17
+          lineNumber: 190,
+          columnNumber: 15
         }
-      }, __jsx("a", {
-        className: "nav-link",
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/about",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 193,
-          columnNumber: 19
+          lineNumber: 191,
+          columnNumber: 17
         }
-      }, __jsx("span", {
-        className: "\tfa fa-book icon",
+      }, __jsx("a", {
+        className: "nav-link",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 194,
-          columnNumber: 21
+          lineNumber: 192,
+          columnNumber: 19
         }
-      }), "\xC0 propos")), __jsx("li", {
+      }, "About"))), __jsx("span", {
         className: "nav-item",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 198,
-          columnNumber: 17
+          columnNumber: 15
         }
-      }, __jsx("a", {
-        className: "nav-link",
-        href: "#",
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/latest-work",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 199,
-          columnNumber: 19
+          columnNumber: 17
         }
-      }, __jsx("span", {
-        className: "\tfa fa-medkit icon",
+      }, __jsx("a", {
+        className: "nav-link",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 200,
-          columnNumber: 21
-        }
-      }), "Innovations")), __jsx("li", {
-        className: "nav-item",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 204,
-          columnNumber: 17
-        }
-      }, __jsx("a", {
-        className: "nav-link",
-        href: "#",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 205,
           columnNumber: 19
         }
-      }, __jsx("span", {
-        className: "\tfa fa-leaf icon",
+      }, "Latest Work"))), __jsx("span", {
+        className: "nav-item",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 206,
-          columnNumber: 21
+          columnNumber: 15
         }
-      }), "Profils")), __jsx("li", {
-        className: "nav-item",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 210,
-          columnNumber: 17
-        }
-      }, __jsx("a", {
-        className: "nav-link",
-        href: "#",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 211,
-          columnNumber: 19
-        }
-      }, __jsx("span", {
-        className: "\tfa fa-gears icon",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 212,
-          columnNumber: 21
-        }
-      }), "Crowdfunding")), __jsx("li", {
-        className: "nav-item",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 216,
-          columnNumber: 17
-        }
-      }, __jsx("a", {
-        className: "nav-link",
-        href: "#",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 217,
-          columnNumber: 19
-        }
-      }, __jsx("span", {
-        className: "\tfa fa-book icon",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 218,
-          columnNumber: 21
-        }
-      }), "Blog")), __jsx("li", {
-        className: "nav-item",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 222,
-          columnNumber: 17
-        }
-      }, __jsx("a", {
-        className: "nav-link",
-        href: "#",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 223,
-          columnNumber: 19
-        }
-      }, __jsx("span", {
-        className: "\tfa fa-book icon",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 224,
-          columnNumber: 21
-        }
-      }), "Forum")), __jsx("li", {
-        className: "nav-item",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 228,
-          columnNumber: 17
-        }
-      }, __jsx("a", {
-        className: "nav-link",
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/contact",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 229,
-          columnNumber: 19
+          lineNumber: 207,
+          columnNumber: 17
         }
-      }, __jsx("span", {
-        className: "\tfa fa-book icon",
+      }, __jsx("a", {
+        className: "nav-link",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 230,
-          columnNumber: 21
+          lineNumber: 208,
+          columnNumber: 19
         }
-      }), "Contact")))))));
+      }, "Contact")))))));
     }
   }]);
 
@@ -1435,7 +1298,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\phezzy\\Desktop\\WORK\\afrihub\\components\\general\\Layout.js";
+var _jsxFileName = "C:\\Users\\phezzy\\Desktop\\WORK\\lampsAndImages\\components\\general\\Layout.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, result); }; }
@@ -3447,12 +3310,12 @@ var e,t=(e=__webpack_require__(/*! querystring */ "./node_modules/querystring-es
 
 /***/ "./node_modules/next/dist/build/polyfills/object-assign.js":
 /*!***********************************************************************************************************************!*\
-  !*** delegated ./node_modules/next/dist/build/polyfills/object-assign.js from dll-reference dll_2adc2403d89adc16ead0 ***!
+  !*** delegated ./node_modules/next/dist/build/polyfills/object-assign.js from dll-reference dll_c2e10d183b950a67d9e7 ***!
   \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0 */ "dll-reference dll_2adc2403d89adc16ead0"))("./node_modules/next/dist/build/polyfills/object-assign.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_c2e10d183b950a67d9e7 */ "dll-reference dll_c2e10d183b950a67d9e7"))("./node_modules/next/dist/build/polyfills/object-assign.js");
 
 /***/ }),
 
@@ -3468,10 +3331,10 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5Cphezzy%5CDesktop%5CWORK%5Cafrihub%5Cpages%5Cindex.js!./":
-/*!********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5Cphezzy%5CDesktop%5CWORK%5Cafrihub%5Cpages%5Cindex.js ***!
-  \********************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5Cphezzy%5CDesktop%5CWORK%5ClampsAndImages%5Cpages%5Cindex.js!./":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5Cphezzy%5CDesktop%5CWORK%5ClampsAndImages%5Cpages%5Cindex.js ***!
+  \***************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5760,12 +5623,12 @@ module.exports = exports['default'];
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_2adc2403d89adc16ead0 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_c2e10d183b950a67d9e7 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0 */ "dll-reference dll_2adc2403d89adc16ead0"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_c2e10d183b950a67d9e7 */ "dll-reference dll_c2e10d183b950a67d9e7"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -6400,12 +6263,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_2adc2403d89adc16ead0 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_c2e10d183b950a67d9e7 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0 */ "dll-reference dll_2adc2403d89adc16ead0"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_c2e10d183b950a67d9e7 */ "dll-reference dll_c2e10d183b950a67d9e7"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -6620,12 +6483,12 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_2adc2403d89adc16ead0 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_c2e10d183b950a67d9e7 ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0 */ "dll-reference dll_2adc2403d89adc16ead0"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_c2e10d183b950a67d9e7 */ "dll-reference dll_c2e10d183b950a67d9e7"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -8747,12 +8610,12 @@ if (false) {} else {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_2adc2403d89adc16ead0 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_c2e10d183b950a67d9e7 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0 */ "dll-reference dll_2adc2403d89adc16ead0"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_c2e10d183b950a67d9e7 */ "dll-reference dll_c2e10d183b950a67d9e7"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -10338,7 +10201,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\phezzy\\Desktop\\WORK\\afrihub\\pages\\index.js";
+var _jsxFileName = "C:\\Users\\phezzy\\Desktop\\WORK\\lampsAndImages\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, result); }; }
@@ -10371,9 +10234,8 @@ var Index = /*#__PURE__*/function (_React$Component) {
 
   Object(_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Index, [{
     key: "componentDidMount",
-    value: function componentDidMount() {
-      this.onScroll();
-      window.addEventListener('scroll', this.onScroll);
+    value: function componentDidMount() {// this.onScroll();
+      // window.addEventListener('scroll', this.onScroll);
     }
   }, {
     key: "componentWillUnmount",
@@ -10423,6 +10285,29 @@ var Index = /*#__PURE__*/function (_React$Component) {
           columnNumber: 9
         }
       }, __jsx("div", {
+        className: "featuring container",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50,
+          columnNumber: 11
+        }
+      }, __jsx("h2", {
+        className: "uppercase",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51,
+          columnNumber: 13
+        }
+      }, "DRAMA | Deadwater Fell - Channel 4"), __jsx("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52,
+          columnNumber: 13
+        }
+      }, "We provided the full camera & grip package to this Channel 4 & Kudos drama shooting in and around Glasgow.")), __jsx("div", {
         id: "banner",
         ref: function ref(e) {
           _this2.banner = e;
@@ -10430,239 +10315,32 @@ var Index = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50,
+          lineNumber: 54,
           columnNumber: 11
         }
-      }, __jsx("div", {
-        id: "socialHeader",
-        ref: this.regSocialHeaderHeight,
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 51,
-          columnNumber: 13
-        }
-      }, __jsx("span", {
-        className: "fa fa-facebook-square",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 52,
-          columnNumber: 15
-        }
-      }), __jsx("span", {
-        className: "fa fa-linkedin-square",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53,
-          columnNumber: 15
-        }
-      }), __jsx("span", {
-        className: "fa fa-twitter-square",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54,
-          columnNumber: 15
-        }
-      }), __jsx("span", {
-        className: "fa fa-instagram",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 55,
-          columnNumber: 15
-        }
-      })), __jsx("img", {
-        src: "/img/heros/5W9IHRVEb5.jpg",
-        alt: "Background",
-        className: "bk",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 57,
-          columnNumber: 13
-        }
-      }), __jsx("section", {
-        className: "pb-0",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 58,
-          columnNumber: 13
-        }
-      }, __jsx("div", {
-        className: "content",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 59,
-          columnNumber: 15
-        }
-      }, __jsx("div", {
-        id: "spinner",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 65,
-          columnNumber: 17
-        }
-      }), __jsx("div", {
-        id: "innovationWeb",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 67,
-          columnNumber: 17
-        }
-      }, __jsx("div", {
-        className: "innovation",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 68,
-          columnNumber: 19
-        }
-      }, __jsx("span", {
-        className: "fa fa-book icon",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 69,
-          columnNumber: 21
-        }
-      })), __jsx("div", {
-        className: "innovation",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 72,
-          columnNumber: 19
-        }
-      }, __jsx("span", {
-        className: "fa fa-medkit icon",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 73,
-          columnNumber: 21
-        }
-      })), __jsx("div", {
-        className: "innovation",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 76,
-          columnNumber: 19
-        }
-      }, __jsx("span", {
-        className: "fa fa-leaf icon",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 77,
-          columnNumber: 21
-        }
-      })), __jsx("div", {
-        className: "innovation",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 80,
-          columnNumber: 19
-        }
-      }, __jsx("span", {
-        className: "fa fa-gears icon",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 81,
-          columnNumber: 21
-        }
-      })), __jsx("div", {
-        className: "innovation",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 84,
-          columnNumber: 19
-        }
-      }, __jsx("span", {
-        className: "fa fa-book icon",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 85,
-          columnNumber: 21
-        }
-      })), __jsx("div", {
-        className: "innovation",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 88,
-          columnNumber: 19
-        }
-      }, __jsx("span", {
-        className: "fa fa-book icon",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 89,
-          columnNumber: 21
-        }
-      })), __jsx("div", {
-        className: "innovation",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 92,
-          columnNumber: 19
-        }
-      }, __jsx("span", {
-        className: "fa fa-book icon",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 93,
-          columnNumber: 21
-        }
-      }))), __jsx(_components_SlideShow__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }, __jsx(_components_SlideShow__WEBPACK_IMPORTED_MODULE_12__["default"], {
         items: [{
-          label: 'Technology',
-          content: __jsx("img", {
-            src: "/img/innovation-1.jpg",
-            alt: "martfury",
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 100,
-              columnNumber: 32
-            }
-          })
-        }, {
           label: 'Education',
-          content: __jsx("img", {
-            src: "/img/innovation-2.jpg",
-            alt: "martfury",
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 107,
-              columnNumber: 32
-            }
-          })
-        }, {
-          label: 'Health',
           content: __jsx("img", {
             src: "/img/innovation-3.jpg",
             alt: "martfury",
             __self: this,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 114,
-              columnNumber: 32
+              lineNumber: 59,
+              columnNumber: 28
+            }
+          })
+        }, {
+          label: 'Health',
+          content: __jsx("img", {
+            src: "/img/innovation-2.jpg",
+            alt: "martfury",
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 66,
+              columnNumber: 28
             }
           })
         }, {
@@ -10673,797 +10351,296 @@ var Index = /*#__PURE__*/function (_React$Component) {
             __self: this,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 121,
-              columnNumber: 32
+              lineNumber: 73,
+              columnNumber: 28
             }
           })
         }],
         __self: this,
         __source: {
           fileName: _jsxFileName,
+          lineNumber: 55,
+          columnNumber: 13
+        }
+      })), __jsx("div", {
+        className: "container",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 82,
+          columnNumber: 11
+        }
+      }, __jsx("div", {
+        className: "featured-board row",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84,
+          columnNumber: 13
+        }
+      }, __jsx("div", {
+        className: "col-lg-2 published",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85,
+          columnNumber: 15
+        }
+      }, __jsx("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 86,
+          columnNumber: 17
+        }
+      }, __jsx("h5", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 87,
+          columnNumber: 19
+        }
+      }, "Published")), __jsx("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89,
+          columnNumber: 17
+        }
+      }, "10 / 12 / 2019")), __jsx("div", {
+        className: "col-lg-7 details",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 92,
+          columnNumber: 15
+        }
+      }, __jsx("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93,
+          columnNumber: 17
+        }
+      }, __jsx("h2", {
+        className: "uppercase",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 94,
+          columnNumber: 19
+        }
+      }, "Deadwater Fell - Channel 4/Kudos")), __jsx("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
           lineNumber: 96,
           columnNumber: 17
         }
-      })))), __jsx("section", {
-        className: "single-center",
+      }, __jsx("b", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 159,
-          columnNumber: 11
+          lineNumber: 97,
+          columnNumber: 19
         }
-      }, __jsx("h2", {
-        className: "section-title bolder",
+      }, "Director: Lynsey Miller")), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 160,
-          columnNumber: 13
-        }
-      }, "Bridging Africa's Pr\xE9sentation "), __jsx("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 161,
-          columnNumber: 13
-        }
-      }, "Bridging Afrika est une plateforme d\u2019innovation en ligne dont l\u2019objectif principal est la r\xE9solution des probl\xE8mes africains gr\xE2ce \xE0 des innovations cr\xE9\xE9es par des africains pour des africains."), __jsx("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 166,
-          columnNumber: 13
-        }
-      }, "Nous voulons faciliter la r\xE9solution de crises en cr\xE9ant un espace o\xF9 toutes les innovations, solutions de ces crises, sont r\xE9f\xE9renc\xE9es et mises en avant."), __jsx("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 170,
-          columnNumber: 13
-        }
-      }, "En promouvant ces innovations, nous cr\xE9erons avec les innovateurs une communaut\xE9 pr\xEAte \xE0 \xEAtre d\xE9ploy\xE9e quelque soit le challenge.")), __jsx("section", {
-        className: "double-sides",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 176,
-          columnNumber: 11
-        }
-      }, __jsx("div", {
-        className: "text",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 177,
-          columnNumber: 13
-        }
-      }, __jsx("h2", {
-        className: "section-title bolder",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 178,
-          columnNumber: 15
-        }
-      }, "Bridging Africa's Pr\xE9sentation "), __jsx("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 179,
-          columnNumber: 15
-        }
-      }, "Bridging Afrika est une plateforme d\u2019innovation en ligne dont l\u2019objectif principal est la r\xE9solution des probl\xE8mes africains gr\xE2ce \xE0 des innovations cr\xE9\xE9es par des africains pour des africains."), __jsx("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 184,
-          columnNumber: 15
-        }
-      }, "Nous voulons faciliter la r\xE9solution de crises en cr\xE9ant un espace o\xF9 toutes les innovations, solutions de ces crises, sont r\xE9f\xE9renc\xE9es et mises en avant."), __jsx("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 188,
-          columnNumber: 15
-        }
-      }, "En promouvant ces innovations, nous cr\xE9erons avec les innovateurs une communaut\xE9 pr\xEAte \xE0 \xEAtre d\xE9ploy\xE9e quelque soit le challenge."), __jsx("div", {
-        className: "text-center",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 192,
-          columnNumber: 15
-        }
-      }, __jsx("button", {
-        type: "button",
-        className: "btn btn-info",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 193,
+          lineNumber: 100,
           columnNumber: 17
         }
-      }, "En savoir plus"))), __jsx("div", {
-        className: "media",
+      }, __jsx("b", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 196,
-          columnNumber: 13
+          lineNumber: 101,
+          columnNumber: 19
         }
-      }, __jsx("img", {
-        src: "/img/square-2.jpg",
-        className: "img-fluid rounded shadow",
-        alt: "j",
+      }, "Producer: Caroline Levy")), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 197,
-          columnNumber: 15
-        }
-      }))), __jsx("section", {
-        className: "double-sides",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 201,
-          columnNumber: 11
-        }
-      }, __jsx("div", {
-        className: "text",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 202,
-          columnNumber: 13
-        }
-      }, __jsx("h2", {
-        className: "section-title bolder",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 203,
-          columnNumber: 15
-        }
-      }, "Bridging Africa's Pr\xE9sentation "), __jsx("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 204,
-          columnNumber: 15
-        }
-      }, "Bridging Afrika est une plateforme d\u2019innovation en ligne dont l\u2019objectif principal est la r\xE9solution des probl\xE8mes africains gr\xE2ce \xE0 des innovations cr\xE9\xE9es par des africains pour des africains."), __jsx("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 209,
-          columnNumber: 15
-        }
-      }, "Nous voulons faciliter la r\xE9solution de crises en cr\xE9ant un espace o\xF9 toutes les innovations, solutions de ces crises, sont r\xE9f\xE9renc\xE9es et mises en avant."), __jsx("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 213,
-          columnNumber: 15
-        }
-      }, "En promouvant ces innovations, nous cr\xE9erons avec les innovateurs une communaut\xE9 pr\xEAte \xE0 \xEAtre d\xE9ploy\xE9e quelque soit le challenge."), __jsx("div", {
-        className: "text-center",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 217,
-          columnNumber: 15
-        }
-      }, __jsx("button", {
-        type: "button",
-        className: "btn btn-info",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 218,
+          lineNumber: 104,
           columnNumber: 17
         }
-      }, "En savoir plus"))), __jsx("div", {
-        className: "media",
+      }, __jsx("b", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 221,
-          columnNumber: 13
+          lineNumber: 105,
+          columnNumber: 19
         }
-      }, __jsx("iframe", {
-        src: "https://www.youtube.com/embed/4ce-Hk6pVsg",
-        className: "rounded shadow",
+      }, "Line Producer: Matthew Brown")), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 222,
-          columnNumber: 15
-        }
-      }))), __jsx("div", {
-        id: "partners",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 226,
-          columnNumber: 11
-        }
-      }, __jsx("div", {
-        className: "content",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 227,
-          columnNumber: 13
-        }
-      }, __jsx("h3", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 228,
-          columnNumber: 15
-        }
-      }, "Our Partners"), __jsx("div", {
-        className: "rocker",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 229,
-          columnNumber: 15
-        }
-      }, __jsx("div", {
-        className: "partners",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 230,
+          lineNumber: 108,
           columnNumber: 17
         }
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/",
+      }, __jsx("b", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 231,
+          lineNumber: 109,
           columnNumber: 19
         }
-      }, __jsx("a", {
-        className: "fa fa-amazon partner",
+      }, "DOP: Neus Oll\xE9")), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 232,
-          columnNumber: 21
-        }
-      })), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 235,
-          columnNumber: 19
-        }
-      }, __jsx("a", {
-        className: "fa fa-adn partner",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 236,
-          columnNumber: 21
-        }
-      })), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 239,
-          columnNumber: 19
-        }
-      }, __jsx("a", {
-        className: "fa fa-android partner",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 240,
-          columnNumber: 21
-        }
-      })), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 243,
-          columnNumber: 19
-        }
-      }, __jsx("a", {
-        className: "fa fa-apple partner",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 244,
-          columnNumber: 21
-        }
-      })), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 247,
-          columnNumber: 19
-        }
-      }, __jsx("a", {
-        className: "fa fa-adn partner",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 248,
-          columnNumber: 21
-        }
-      })), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 251,
-          columnNumber: 19
-        }
-      }, __jsx("a", {
-        className: "fa fa-apple partner",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 252,
-          columnNumber: 21
-        }
-      })), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 255,
-          columnNumber: 19
-        }
-      }, __jsx("a", {
-        className: "fa fa-amazon partner",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 256,
-          columnNumber: 21
-        }
-      })), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 259,
-          columnNumber: 19
-        }
-      }, __jsx("a", {
-        className: "fa fa-adn partner",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 260,
-          columnNumber: 21
-        }
-      })), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 263,
-          columnNumber: 19
-        }
-      }, __jsx("a", {
-        className: "fa fa-android partner",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 264,
-          columnNumber: 21
-        }
-      })), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 267,
-          columnNumber: 19
-        }
-      }, __jsx("a", {
-        className: "fa fa-apple partner",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 268,
-          columnNumber: 21
-        }
-      })), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 271,
-          columnNumber: 19
-        }
-      }, __jsx("a", {
-        className: "fa fa-adn partner",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 272,
-          columnNumber: 21
-        }
-      })), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 275,
-          columnNumber: 19
-        }
-      }, __jsx("a", {
-        className: "fa fa-apple partner",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 276,
-          columnNumber: 21
-        }
-      })))))), __jsx("section", {
-        id: "extraSection",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 283,
-          columnNumber: 11
-        }
-      }, __jsx("div", {
-        className: "row",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 284,
-          columnNumber: 13
-        }
-      }, __jsx("div", {
-        id: "blogs",
-        className: "col-md-12 ",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 285,
-          columnNumber: 15
-        }
-      }, __jsx("h2", {
-        className: "display-5 title",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 286,
+          lineNumber: 113,
           columnNumber: 17
         }
-      }, "Latest Articles"), __jsx("div", {
-        className: "row content",
+      }, "This was our first foray into major long form drama in Scotland and went without a hitch. Initial testing and prep happened at our Manchester HQ with further testing up in Scotland pre shoot. It was such a pleasure to work with Neus again after working across shorter projects a few years previous. Her attitude to her work, vision for the project and general personality were uplifting to be around and it was a real joy to meet up with all crew after wrap for a bit of a knees up."), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 287,
+          lineNumber: 116,
           columnNumber: 17
         }
-      }, __jsx("div", {
-        className: "blog-post col-lg-3",
+      }, " ", __jsx("b", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 288,
-          columnNumber: 19
-        }
-      }, __jsx("div", {
-        className: "card h-100 hover-box-shadow",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 289,
+          lineNumber: 116,
           columnNumber: 21
         }
-      }, __jsx("div", {
-        className: "d-block bg-gradient rounded-top position-relative",
+      }, " Equipment supplied: "), "2x Arri Alexa Mini and TLS Rehoused Canon K35 & FD Lenses"), __jsx("a", {
+        href: "https://www.channel4.com/press/news/deadwater-fell-first-look-images-released",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 290,
-          columnNumber: 23
+          lineNumber: 120,
+          columnNumber: 17
         }
-      }, __jsx("img", {
-        className: "card-img-top hover-fade-out",
-        src: "/img/blog/1.jpg",
-        alt: "accompanying Treva testimonial",
+      }, "https://www.channel4.com/press/news/deadwater-fell-first-look-images-released"), __jsx("iframe", {
+        src: "https://www.youtube.com/embed/yEQsLSfl8gA",
+        frameBorder: "0",
+        width: "560",
+        height: "315",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 291,
-          columnNumber: 25
+          lineNumber: 122,
+          columnNumber: 17
         }
       })), __jsx("div", {
-        className: "card-body",
+        className: "col-lg-3 more-work",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 298,
-          columnNumber: 23
-        }
-      }, __jsx("h5", {
-        className: "card-title",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 299,
-          columnNumber: 25
-        }
-      }, "Comment s\u2019organise la riposte contre le Covid-19 au Cameroun ?"), __jsx("p", {
-        className: "card-info",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 300,
-          columnNumber: 25
-        }
-      }, "Face au d\xE9fi du coronavirus, le Cameroun a mis en place un syst\xE8me de d\xE9tection qui ob\xE9it \xE0 une proc\xE9dure conforme aux orientations propos\xE9es par l\u2019Organisation mondiale de la sant\xE9 (OMS)."), __jsx("a", {
-        href: "#",
-        className: "stretched-link",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 303,
-          columnNumber: 25
-        }
-      }, "Read Story")))), __jsx("div", {
-        className: "blog-post col-lg-3",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 307,
-          columnNumber: 19
-        }
-      }, __jsx("div", {
-        className: "card h-100 hover-box-shadow",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 308,
-          columnNumber: 21
-        }
-      }, __jsx("div", {
-        className: "d-block bg-gradient rounded-top position-relative",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 309,
-          columnNumber: 23
-        }
-      }, __jsx("img", {
-        className: "card-img-top hover-fade-out",
-        src: "/img/blog/2.jpg",
-        alt: "accompanying Treva testimonial",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 310,
-          columnNumber: 25
-        }
-      })), __jsx("div", {
-        className: "card-body",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 317,
-          columnNumber: 23
-        }
-      }, __jsx("h5", {
-        className: "card-title",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 318,
-          columnNumber: 25
-        }
-      }, "Acc\xE8s prioritaire au vaccin chinois contre la Covid-19 pour l\u2019Afrique ?"), __jsx("p", {
-        className: "card-info",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 319,
-          columnNumber: 25
-        }
-      }, "(Agence Ecofin) - Bient\xF4t l\u2019\xE9pilogue ? Point de d\xE9part de la maladie \xE0 Coronavirus 2019 et ancien \xE9picentre de la pand\xE9mie, la Chine peut aujourd\u2019hui se targuer d\u2019avoir acquis une certaine exp\xE9rience pour ce qui est de la gestion de cette crise. Mieux, selon Ding Yifang, conseiller aupr\xE8s du gouvernement, un vaccin sera bient\xF4t produit en masse."), __jsx("a", {
-        href: "#",
-        className: "stretched-link",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 322,
-          columnNumber: 25
-        }
-      }, "Read Story")))), __jsx("div", {
-        className: "blog-post col-lg-3",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 326,
-          columnNumber: 19
-        }
-      }, __jsx("div", {
-        className: "card h-100 hover-box-shadow",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 327,
-          columnNumber: 21
-        }
-      }, __jsx("div", {
-        className: "d-block bg-gradient rounded-top position-relative",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 328,
-          columnNumber: 23
-        }
-      }, __jsx("img", {
-        className: "card-img-top hover-fade-out",
-        src: "/img/blog/4.webp",
-        alt: "accompanying Treva testimonial",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 329,
-          columnNumber: 25
-        }
-      })), __jsx("div", {
-        className: "card-body",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 336,
-          columnNumber: 23
-        }
-      }, __jsx("h5", {
-        className: "card-title",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 337,
-          columnNumber: 25
-        }
-      }, "Covid-19 : nette acc\xE9l\xE9ration de la pand\xE9mie en Afrique, avertit l'OMS"), __jsx("p", {
-        className: "card-info",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 338,
-          columnNumber: 25
-        }
-      }, "La vitesse \xE0 laquelle le nombre de cas confirm\xE9s de Covid-19 a doubl\xE9 \u2014 moins de 20 jours \u2014 montre l'acc\xE9l\xE9ration de la propagation du nouveau coronavirus en Afrique, a averti, jeudi 11 juin, l'Organisation mondiale de Sant\xE9 (OMS)."), __jsx("a", {
-        href: "#",
-        className: "stretched-link",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 341,
-          columnNumber: 25
-        }
-      }, "Read Story")))), __jsx("div", {
-        className: "blog-post col-lg-3",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 345,
-          columnNumber: 19
-        }
-      }, __jsx("div", {
-        className: "card h-100 hover-box-shadow",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 346,
-          columnNumber: 21
-        }
-      }, __jsx("div", {
-        className: "d-block bg-gradient rounded-top position-relative",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 347,
-          columnNumber: 23
-        }
-      }, __jsx("img", {
-        className: "card-img-top hover-fade-out",
-        src: "/img/case-studies/thumb-5.jpg",
-        alt: "accompanying Treva testimonial",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 348,
-          columnNumber: 25
-        }
-      })), __jsx("div", {
-        className: "card-body",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 355,
-          columnNumber: 23
-        }
-      }, __jsx("h5", {
-        className: "card-title",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 356,
-          columnNumber: 25
-        }
-      }, "Covid-19: voici le top 10 Africain des pays les plus touch\xE9s"), __jsx("p", {
-        className: "card-info",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 357,
-          columnNumber: 25
-        }
-      }, "Avec plus de 9 420 cas d\xE9clar\xE9s de covid-19 et 186 morts, l\u2019Afrique du Sud pr\xE9sente le bilan le plus lourd en termes de personnes infect\xE9es selon les donn\xE9es de l\u2019Universit\xE9 Johns Hopkins. Le pays de Mandela est suivi de l\u2019Egypte, avec 8 964 cas positifs et \xE0 ce jour 514 d\xE9c\xE8s. Le Maroc pr\xE9sente, lui, 6 038 cas pour 188 d\xE9c\xE8s contre 5 558 cas et 494 morts pour l\u2019Alg\xE9rie."), __jsx("a", {
-        href: "#",
-        className: "stretched-link",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 360,
-          columnNumber: 25
-        }
-      }, "Read Story")))))))), __jsx("section", {
-        id: "feedback",
-        style: {
-          display: 'none'
-        },
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 369,
-          columnNumber: 11
-        }
-      }, __jsx("h2", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 370,
-          columnNumber: 13
-        }
-      }, "Laissez-nous votre adresse e-mail, nous vous recontacterons une fois que le site internet sera fonctionnel "), __jsx("div", {
-        id: "box",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 371,
-          columnNumber: 13
-        }
-      }, __jsx("input", {
-        placeholder: "Input email",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 372,
+          lineNumber: 125,
           columnNumber: 15
         }
-      }), __jsx("button", {
-        type: "button",
-        className: "btn btn-primary ml-lg-4 mr-3 mr-md-4 mr-lg-0 d-none d-sm-block order-lg-3",
+      }, __jsx("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 373,
-          columnNumber: 15
+          lineNumber: 126,
+          columnNumber: 17
         }
-      }, "Envoyer")))));
+      }, __jsx("h4", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 127,
+          columnNumber: 19
+        }
+      }, "MORE WORK")), __jsx("div", {
+        className: "works",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 130,
+          columnNumber: 17
+        }
+      }, __jsx("div", {
+        className: "work",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 131,
+          columnNumber: 19
+        }
+      }, __jsx("p", {
+        className: "date",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 132,
+          columnNumber: 21
+        }
+      }, "10 / 12 / 2019"), __jsx("h5", {
+        className: "title",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 133,
+          columnNumber: 21
+        }
+      }, __jsx("a", {
+        href: "/",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 134,
+          columnNumber: 23
+        }
+      }, " DRAMA | Cold Call - Channel 5 ")), __jsx("img", {
+        className: "preview",
+        src: "/img/work 1.jpg",
+        alt: "",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 136,
+          columnNumber: 21
+        }
+      })), __jsx("div", {
+        className: "work",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 140,
+          columnNumber: 19
+        }
+      }, __jsx("p", {
+        className: "date",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 141,
+          columnNumber: 21
+        }
+      }, "10 / 12 / 2019"), __jsx("h5", {
+        className: "title",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 142,
+          columnNumber: 21
+        }
+      }, __jsx("a", {
+        href: "/",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 143,
+          columnNumber: 23
+        }
+      }, " DRAMA | Cold Call - Channel 5 ")), __jsx("img", {
+        className: "preview",
+        src: "/img/work 2.jpg",
+        alt: "",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 145,
+          columnNumber: 21
+        }
+      }))))))));
     }
   }]);
 
@@ -11531,25 +10708,25 @@ var updateSocialHeader = function updateSocialHeader(props) {
 /***/ }),
 
 /***/ 2:
-/*!************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Cphezzy%5CDesktop%5CWORK%5Cafrihub%5Cpages%5Cindex.js ***!
-  \************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Cphezzy%5CDesktop%5CWORK%5ClampsAndImages%5Cpages%5Cindex.js ***!
+  \*******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Cphezzy%5CDesktop%5CWORK%5Cafrihub%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5Cphezzy%5CDesktop%5CWORK%5Cafrihub%5Cpages%5Cindex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Cphezzy%5CDesktop%5CWORK%5ClampsAndImages%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5Cphezzy%5CDesktop%5CWORK%5ClampsAndImages%5Cpages%5Cindex.js!./");
 
 
 /***/ }),
 
-/***/ "dll-reference dll_2adc2403d89adc16ead0":
+/***/ "dll-reference dll_c2e10d183b950a67d9e7":
 /*!*******************************************!*\
-  !*** external "dll_2adc2403d89adc16ead0" ***!
+  !*** external "dll_c2e10d183b950a67d9e7" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_2adc2403d89adc16ead0;
+module.exports = dll_c2e10d183b950a67d9e7;
 
 /***/ })
 
